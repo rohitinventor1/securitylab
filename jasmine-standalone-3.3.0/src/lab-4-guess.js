@@ -8,7 +8,7 @@ function guessNum(guess) {
     var noInput = "A value was not entered.";
     var correct = "You guessed it!";
     var validIncorrect = "Guess again.";
-    var outOfRange = "Way off! Pick between 1 and 10.";
+    var outOfRange = "Way off!!!! Pick between 1 and 10.";//edit according to specification
 
     if (isNaN(guess)) {
         return noNumber;
@@ -18,10 +18,10 @@ function guessNum(guess) {
         return noInput;
     }
 
-    if (guess <= 1 || guess >= 10) {
+    if (guess < 1 || guess > 10) {
+    //remove = sign
         return outOfRange;
     }
-	
     if (parseInt(guess) === secretGuess) {
         return correct;
     } else {

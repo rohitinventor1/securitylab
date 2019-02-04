@@ -33,7 +33,6 @@ describe("Test to fail function",function(){
     it(" should return A value was not entered.",function(){
     var testNumber = "" ;
       expect(guessNum(testNumber)).toEqual("A value was not entered.");
-
     });
 
 
@@ -42,14 +41,43 @@ describe("Test to fail function",function(){
 
 describe("Test to Boundry",function(){
 
-    
+   
 
-    it(" should return Way off!!!! Pick between 1 and 10.",function(){
-    var testNumber = 11 ;
-      expect(guessNum(testNumber)).toEqual("Way off! Pick between 1 and 10.");
+it(" should return Way off!!!! Pick between 1 and 10.",function(){
+    var testNumber = 0 ;
+      expect(guessNum(testNumber)).toEqual("Way off!!!! Pick between 1 and 10.");
 
     });
 
+it(" should return Guess again. for any whole number between 1 and 10 (inclusive), except the correct answer.",function(){
+    var testNumber = 1 ;
+      expect(guessNum(testNumber)).toEqual("Guess again.");
+
+    });
+ it(" should return Guess again. for any whole number between 1 and 10 (inclusive), except the correct answer.",function(){
+    var testNumber = 2 ;
+      expect(guessNum(testNumber)).toEqual("Guess again.");
+
+    });
+
+ it(" should return Guess again. for any whole number between 1 and 10 (inclusive), except the correct answer.",function(){
+    var testNumber = 9 ;
+      expect(guessNum(testNumber)).toEqual("Guess again.");
+
+    });
+
+
+  it(" should return Guess again. for any whole number between 1 and 10 (inclusive), except the correct answer.",function(){
+    var testNumber = 10 ;
+      expect(guessNum(testNumber)).toEqual("Guess again.");
+
+    });
+
+    it(" should return Way off!!!! Pick between 1 and 10.",function(){
+    var testNumber = 11 ;
+      expect(guessNum(testNumber)).toEqual("Way off!!!! Pick between 1 and 10.");
+
+    });
 
   });
 
